@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ejemplo3
+  labels:
+    app: rsejemplo3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rsejemplo3
+  template:
+    metadata:
+      labels:
+        app: rsejemplo3
+    spec:
+      containers:
+      - name: ejem3cont1
+        image: python:3.6-alpine
+        command: ['sh', '-c','echo "Ejemplo 3 Cont1" >> index.html && python -m http.server 8082']
+      - name: ejem3cont2
+        image: python:3.6-alpine
+        command: ['sh', '-c','echo "Ejemplo 3 Cont2" >> index.html && python -m http.server 8083']
+

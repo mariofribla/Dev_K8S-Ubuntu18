@@ -1,0 +1,25 @@
+
+=> Inicializa Minikube con Docker.
+minikube start --driver=none
+
+=> Visualiza el status de Minikube.
+minikube status
+
+=> muestra los pods disponibles en el namespace.
+kubectl get pods
+
+Ejemplo1:
+----------
+
+kubectl run --generator=run-pod/v1 ejemplo1 --image=nginx:alpine
+
+kubectl get pods
+
+kubectl describe pod ejemplo1
+
+kubectl exec -ti ejemplo1 -- sh
+
+kubectl logs ejemplo1 [-f ]
+
+kubectl delete pod ejemplo1
+

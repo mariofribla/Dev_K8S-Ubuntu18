@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ejemplo2
+spec:
+  containers:
+  - name: ejemcont1
+    image: python:3.6-alpine
+    command: ['sh', '-c','echo "Ejemplo Cont1" > index.html && python -m http.server 8082']
+  - name: ejemcont2
+    image: python:3.6-alpine
+    command: ['sh', '-c','echo "Ejemplo Cont2" > index.html && python -m http.server 8083']
+
