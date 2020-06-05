@@ -2,11 +2,28 @@
 
 Este GitHub describe la Shell que esta desarrolla para la instalación de Minikube(K8S) con Docker v.18 Localmente.
 
-## Requisitos
+## Pre-Requisitos
 * Ubuntu 18.04.4 LTS.
-* Docker versión 18.* (la versión 19 no es soportada aun).
+* Docker versión 18.* (la versión 19.03 es soportada, otra versión 19 hay que probar).
+
+## Directorio SHELL
+* Si no posee en su Ubuntu los Requisitos, podra ejecutar la Shell Ubuntu18_64bits_k8s.sh, la cual instalará todo el ambiente necesario para su ejecución.
+
+* Ejecute la shell Ubuntu18_64bits_k8s_SinDocker.sh, si ya posee los Pre-Requisitos instalados en su ambeinte, la cual instalará todo el ambiente necesario para su ejecución. 
+
+
+## Ejemplos:
+En el directorio YML, encontraras los siguientes ejemplos:
+* Ejemplo 1: Creación de un Pod por línea de comando.
+* Ejemplo 2: Un Pod con dos contenedores Nginx.
+* Ejemplo 3: Aplicando Replicación de Pod’s.
+* Ejemplo 4: Aplicando un Deployment en un ClusteIP.
+* Ejemplo 5: Aplicando Deployment en un App Web. (backend)
 
 ## DESCRIPCIÓN SHELL
+
+El objetivo es describir las acciones que realiza las Shell publicadas.
+
 ### Validación para Soporte Virtual
 ```sh
 $ grep -q ^flags.*\ hypervisor /proc/cpuinfo && echo "This machine is a VM"
